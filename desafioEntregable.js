@@ -5,12 +5,10 @@ class ProductManager {
     this.idProduct = 0;
   }
 
-
   //método getProducts
   getProducts = () => {
     return this.products;
   }
-
 
   //método addProduct
   addProduct = ( title, description, price, thumbnail, code, stock ) => {
@@ -32,8 +30,6 @@ class ProductManager {
             
         }
 
-        
-
         this.products.push(addAProduct);
       }
       
@@ -48,7 +44,6 @@ class ProductManager {
     }
   }
 
-  
 }
 
 //Prueba
@@ -73,10 +68,6 @@ console.log(productManager.getProducts());
 //producto 2
 productManager.addProduct( "producto nuevo", "Este es un nuevo producto", 200, "Sin imagen", "abc1234", 25);
 console.log(productManager.getProducts());
-/* //producto id 3
-productManager.addProduct( "producto nuevo", "Este es un nuevo producto", 200, "Sin imagen", "abc12345", 25);
-console.log(productManager.getProducts()); */
-
 
 
   //busca producto con id diferente si encuentra el producto lo muestra con id 2
