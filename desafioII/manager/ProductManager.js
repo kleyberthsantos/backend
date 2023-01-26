@@ -31,36 +31,61 @@ export default class ProductManager {
   }
 
   //** 
-    getProductById = (id) => {
-      const productosId = (products => products.id === id);
-        if( productosId === id ){
-          return productos.id;
+
+  async getProductById(id) { 
+    try { 
+        const array = await this.getProducts();
+        let productoId = array.find( (item) => item.id === id);
+        let productoParseado = JSON.stringify(productoId);
+        if(productoId){
+          console.log("Id de producto seleccionado: "+ productoParseado);
         } else {
-          console.log("Error: Producto no encontrado");
+          console.log("Error: Id Producto no encontrado");
+        }
+    }catch(err){
+      throw err;
+    }
+  }
+
+  //** 
+  async updateProduct(id, thumbnail) {
+    try{
+      const array = await this.getProducts();
+      let productoId = array.find( (item) => item.id === id);
+      //console.log(JSON.stringify(productoId));
+      productoId.thumbnail = thumbnail;
+
+      let productoParseado = JSON.stringify(productoId);
+      if(productoId){
+        console.log("\nEste es el Update: "+ productoParseado);
+      } else {
+        throw err;
+      }
+
+      await fs.promises.writeFile(path, JSON.stringify(products, null, '\t'));
+      return productos;
+
+  } catch {
+    return ("\nError: Update Producto no encontrado");
+  }
+
+    }
+
+
+  //** 
+  async deleteProduct(id) {
+    let array = await this.getProducts();
+      let deleteId = array.find( (item) => item.id === id);
+      
+        if (deleteId) {
+          let productSelected = array.splice(id -1, id-1);
+          console.log("\nproducto a eliminar " + JSON.stringify(deleteId));
+          console.log("\nproducto seleccionado " + JSON.stringify(productSelected));
+          console.log(JSON.stringify(array));
+        } else {
+          console.log("\nError: Id Delete Producto no encontrado");
         }
       }
+        
+  }
 
-
-  //** 
-    updateProduct(id, product) {
-      let products = this.products.findIndex(products => products.id === id);
-      if(products === -1) {
-        products.id;
-          return;
-      } else {
-      product.id = id;
-      products[index] = product;
-      }
-    }
-
-
-  //** 
-    deleteProduct(id) {
-    let index = (products => products.id === id);
-      if(index === -1) {
-      return index.id;
-      } else {
-        console.log("Error: Producto no eliminado");
-      }
-    }
-}

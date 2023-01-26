@@ -19,15 +19,11 @@ const managerProduct = async() => {
 
   productos = await manager.getProducts();
 
-  await manager.getProductById(4);
-  console.log(product);
+  await manager.getProductById(1);
 
-  await manager.deleteProduct(5);
-  try {
-  product = manager.getProductById(5);
-  } catch(error) {
-  console.log(error.message);
-  }
+  await manager.updateProduct(2, "_A T R I B U T O   N U E V O_");
+
+  await manager.deleteProduct(3);
 }
 
 managerProduct();
