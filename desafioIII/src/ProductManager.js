@@ -6,10 +6,6 @@ export default class ProductManager {
     this.ruta = ruta;
   }
 
-  async save(obj) {
-    
-  }
-
   async getProductsById(id) {
     try { 
       const products = await promises.readFile(this.ruta, 'utf-8');
@@ -35,12 +31,5 @@ export default class ProductManager {
       }
   }
 
-  async deleteById(id) {
-    
-  }
-
-  async deleteAll() {
-    
-  }
 }
 
