@@ -1,0 +1,62 @@
+[
+    { 
+    "title": "Laptop Dell XPS", 
+    "price": 1000, 
+    "thumbnail": "https://www.dell.com/.../laptops/xps-laptops/spd/xps-13-laptop", 
+    "id": 1 
+    },
+    {
+    "title": "Television LED Samsung", 
+    "price": 800, 
+    "thumbnail": "https://www.samsung.com/.../television-led-smart-tv", 
+    "id": 2 
+    },
+    {
+    "title": "Smartphone iPhone 12", 
+    "price": 1200, 
+    "thumbnail": "https://www.apple.com/.../iphone-12", 
+    "id": 3 
+    },
+    { 
+    "title": "Tablet iPad Pro", 
+    "price": 900, 
+    "thumbnail": "https://www.apple.com/.../ipad-pro", 
+    "id": 4 
+    },
+    {
+    "title": "Refrigerador Whirlpool", 
+    "price": 700, 
+    "thumbnail": "https://www.whirlpool.com/.../refrigeradores", 
+    "id": 5 
+    },
+    {
+    "title": "Microondas LG", 
+    "price": 200, 
+    "thumbnail": "https://www.lg.com/.../microondas", 
+    "id": 6 
+    },
+    {
+    "title": "Aspiradora Dyson", 
+    "price": 500, 
+    "thumbnail": "https://www.dyson.com/.../aspiradoras", 
+    "id": 7 
+    },
+    {
+    "title": "Ventilador Honeywell", 
+    "price": 150, 
+    "thumbnail": "https://www.honeywellhome.com/.../ventiladores", 
+    "id": 8 
+    },
+    {
+    "title": "Lavadora Bosch", 
+    "price": 600, 
+    "thumbnail": "https://www.bosch-home.com/.../lavadoras", 
+    "id": 9 
+    },
+    {
+    "title": "Plancha Philips", 
+    "price": 100, 
+    "thumbnail": "https://www.philips.com/.../planchan", 
+    "id": 10
+    }
+]
